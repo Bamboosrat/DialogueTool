@@ -14,8 +14,17 @@ namespace DialogueTool.Editor
     public class DialogueEditor : EditorWindow
     {
         Dialogue selectedDialogue = null;
-        GUIStyle nodeStyle;
+        [NonSerialized]
         DialogueNode draggingNode = null;
+        [NonSerialized]
+        DialogueNode creatingNode = null;
+        [NonSerialized]
+        DialogueNode deletingNode = null;
+        [NonSerialized]
+        DialogueNode linkingParentNode = null;
+        [NonSerialized]
+        GUIStyle nodeStyle;
+        [NonSerialized]
         Vector2 draggingOffset;
 
 
@@ -85,6 +94,21 @@ namespace DialogueTool.Editor
                 {
                     DrawNode(node);
                 }
+
+            }
+
+            if(creatingNode != null)
+            {
+                Undo.RecordObject(selectedDialogue, "Added Dialogue Node");
+                selectedDialogue.CreateNode(creatingNode);
+                creatingNode = null;
+            }
+
+            if (deletingNode != null)
+            {
+                Undo.RecordObject(selectedDialogue, "Removed Dialogue Node");
+                selectedDialogue.DeleteNode(deletingNode);
+                deletingNode = null;
             }
         }
 
@@ -133,8 +157,8 @@ namespace DialogueTool.Editor
             GUILayout.BeginArea(node.rect, nodeStyle);
             EditorGUI.BeginChangeCheck();
 
-            EditorGUILayout.LabelField("Node:", EditorStyles.whiteLabel);
-            string newID = EditorGUILayout.TextField(node.uniqueID);
+
+
             string newText = EditorGUILayout.TextField(node.text);
 
             // save/ mark as dirty, updates/ changes the scriptable object
@@ -142,9 +166,29 @@ namespace DialogueTool.Editor
             if (EditorGUI.EndChangeCheck())
             {
                 Undo.RecordObject(selectedDialogue, "Update Dialogue Text");
-                node.uniqueID = newID;
+
                 node.text = newText;
             }
+
+            GUILayout.BeginHorizontal();
+
+            if (GUILayout.Button("-"))
+            {
+                deletingNode = node;
+
+            }
+
+            DrawLinkButtons(node);
+
+            if (GUILayout.Button("+"))
+            {
+                creatingNode = node;
+
+            }
+
+
+
+            GUILayout.EndHorizontal();
 
             foreach (DialogueNode childNode in selectedDialogue.GetAllChildren(node))
             {
@@ -155,6 +199,43 @@ namespace DialogueTool.Editor
             GUILayout.EndArea();
         }
 
+        private void DrawLinkButtons(DialogueNode node)
+        {
+            if (linkingParentNode == null)
+            {
+
+                if (GUILayout.Button("Link"))
+                {
+                    linkingParentNode = node;
+                }
+            }
+            else if(linkingParentNode == node)
+            {
+                if (GUILayout.Button("Cancel"))
+                {
+                    linkingParentNode = null;
+                }
+            }else if (linkingParentNode.children.Contains(node.uniqueID))
+            {
+                if (GUILayout.Button("Unlink"))
+                {
+                    Undo.RecordObject(selectedDialogue, "Remove Dialogue Link");
+
+                    linkingParentNode.children.Remove(node.uniqueID);
+                    linkingParentNode = null;
+                }
+            }
+            else
+            {
+                if (GUILayout.Button("Child"))
+                {
+                    Undo.RecordObject(selectedDialogue, "Add Dialogue Link");
+
+                        linkingParentNode.children.Add(node.uniqueID);
+                    linkingParentNode = null;
+                }
+            }
+        }
 
         private void DrawConnections(DialogueNode node)
         {

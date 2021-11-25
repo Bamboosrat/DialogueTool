@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85fa2bb5f35af8a49bfd20acaf6516d1, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  nodes:
+  - uniqueID: 1bf0342c-8654-4e95-8730-2c38f43b2444
+    text: Greetings traveller.
+    children:
+    - 875a6897-559a-4e86-afc8-f116816006ab
+    - fda19d0a-3994-4fde-9885-0c1c50f63b19
+    - daee16b9-5c9a-4978-9411-edb4cba5f8be
+    - a70eccd0-4908-4a1f-97fe-b957ef061bf6
+    rect:
+      serializedVersion: 2
+      x: 14
+      y: 123
+      width: 200
+      height: 100
+  - uniqueID: 875a6897-559a-4e86-afc8-f116816006ab
+    text: What's up?
+    children: []
+    rect:
+      serializedVersion: 2
+      x: 332
+      y: 38
+      width: 200
+      height: 100
+  - uniqueID: fda19d0a-3994-4fde-9885-0c1c50f63b19
+    text: How's Life?
+    children: []
+    rect:
+      serializedVersion: 2
+      x: 346
+      y: 260
+      width: 200
+      height: 100
+  - uniqueID: daee16b9-5c9a-4978-9411-edb4cba5f8be
+    text: Good Bye!
+    children: []
+    rect:
+      serializedVersion: 2
+      x: 346
+      y: 389
+      width: 200
+      height: 100
+  - uniqueID: a70eccd0-4908-4a1f-97fe-b957ef061bf6
+    text: I made big poopoo :)
+    children: []
+    rect:
+      serializedVersion: 2
+      x: 339
+      y: 142
+      width: 200
+      height: 100
