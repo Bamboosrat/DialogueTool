@@ -9,6 +9,8 @@ namespace DialogueTool
         [SerializeField]
         List<DialogueNode> nodes = new List<DialogueNode>();
 
+        Dictionary<string, DialogueNode> nodeLookUp = new Dictionary<string, DialogueNode>();
+
         #if UNITY_EDITOR
         // Preprocessor, runs only in editor
         // runs before any C# code
@@ -21,12 +23,38 @@ namespace DialogueTool
             }
 
         }
-        #endif
+#endif
+        // is called when an object is changed in the inspector
+        private void OnValidate()
+        {
+            nodeLookUp.Clear();
+            foreach (DialogueNode node in GetAllNodes())
+            {
+                nodeLookUp[node.uniqueID] = node;
+            }
+        }
 
         // Flexible data container
         public IEnumerable<DialogueNode> GetAllNodes()
         {
             return nodes;
+        }
+
+
+        public DialogueNode GetRootNode()
+        {
+             return nodes[0];
+        }
+
+        public IEnumerable<DialogueNode> GetAllChildren(DialogueNode parentNode)
+        {
+            List<DialogueNode> result = new List<DialogueNode>();
+            foreach (string childID in parentNode.children)
+            {
+                if (nodeLookUp.ContainsKey(childID))
+                    yield return nodeLookUp[childID];
+
+            }
         }
     }
 }
