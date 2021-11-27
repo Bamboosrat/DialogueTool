@@ -22,11 +22,20 @@ namespace DialogueTool.Editor
         DialogueNode deletingNode = null;
         [NonSerialized]
         DialogueNode linkingParentNode = null;
+
         [NonSerialized]
         GUIStyle nodeStyle;
         [NonSerialized]
         Vector2 draggingOffset;
+        
+        [NonSerialized]
+        bool draggingCanvas = false;
+        [NonSerialized]
+        Vector2 draggingCanvasOffset;
+        const float canvasSize = 4000f;
+        const float backgroundSize = 50f;
 
+        Vector2 scrollPosition;
 
         // static keyword or methods belongs to no specific instances but all DialogueEditor scripts
         [MenuItem("Window/Dialogue Editor")]
@@ -81,11 +90,20 @@ namespace DialogueTool.Editor
 
         private void OnGUI()
         {
+
+           
             if(selectedDialogue == null)
                 EditorGUILayout.LabelField("No Dialogue selected!");
             else
             {
                 ProcessEvents();
+                scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition);
+
+                Rect canvas = GUILayoutUtility.GetRect(canvasSize, canvasSize);
+                Texture2D backgroundTexture = Resources.Load("background") as Texture2D;
+                Rect texCoords = new Rect(0, 0, canvasSize / backgroundSize, canvasSize / backgroundSize);
+                GUI.DrawTextureWithTexCoords(canvas, backgroundTexture, texCoords);
+
                 foreach (DialogueNode node in selectedDialogue.GetAllNodes())
                 {
                     DrawConnections(node);
@@ -95,43 +113,65 @@ namespace DialogueTool.Editor
                     DrawNode(node);
                 }
 
+                EditorGUILayout.EndScrollView();
+
+
+                if (creatingNode != null)
+                {
+                    Undo.RecordObject(selectedDialogue, "Added Dialogue Node");
+                    selectedDialogue.CreateNode(creatingNode);
+                    creatingNode = null;
+                }
+
+                if (deletingNode != null)
+                {
+                    Undo.RecordObject(selectedDialogue, "Removed Dialogue Node");
+                    selectedDialogue.DeleteNode(deletingNode);
+                    deletingNode = null;
+                }
             }
 
-            if(creatingNode != null)
-            {
-                Undo.RecordObject(selectedDialogue, "Added Dialogue Node");
-                selectedDialogue.CreateNode(creatingNode);
-                creatingNode = null;
-            }
-
-            if (deletingNode != null)
-            {
-                Undo.RecordObject(selectedDialogue, "Removed Dialogue Node");
-                selectedDialogue.DeleteNode(deletingNode);
-                deletingNode = null;
-            }
+            
         }
 
         private void ProcessEvents()
         {
-           if(Event.current.type == EventType.MouseDown && draggingNode == null)
+            if (Event.current.type == EventType.MouseDown && draggingNode == null)
             {
-                draggingNode = GetNodeAtPoint(Event.current.mousePosition);
+                draggingNode = GetNodeAtPoint(Event.current.mousePosition + scrollPosition);
                 if (draggingNode != null)
                     draggingOffset = draggingNode.rect.position - Event.current.mousePosition;
+                else
+                {
+                    draggingCanvas = true;
+                    draggingCanvasOffset = Event.current.mousePosition + scrollPosition;
+                }
             }
             else if (Event.current.type == EventType.MouseDrag && draggingNode != null)
             {
                 Undo.RecordObject(selectedDialogue, "Move Dialogue Position");
                 draggingNode.rect.position = Event.current.mousePosition + draggingOffset;
-                
+
+
+
                 GUI.changed = true;
             }
-            else if(Event.current.type == EventType.MouseUp && draggingNode != null)
+            else if (Event.current.type == EventType.MouseDrag && draggingCanvas)
+            {
+                scrollPosition = draggingCanvasOffset - Event.current.mousePosition;
+
+                GUI.changed = true;
+            
+            }
+            else if (Event.current.type == EventType.MouseUp && draggingNode != null)
             {
                 draggingNode = null;
 
-            } 
+            }
+            else if (Event.current.type == EventType.MouseUp && draggingCanvas)
+            {
+                draggingCanvas = false;
+            }
 
         }
 
@@ -250,7 +290,7 @@ namespace DialogueTool.Editor
                     startPosition, endPosition, 
                     startPosition + controlPointOffset, 
                     endPosition - controlPointOffset, 
-                    Color.white, null,  10f);
+                    Color.white, null,  5f);
 
             }
         }

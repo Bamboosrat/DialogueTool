@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85fa2bb5f35af8a49bfd20acaf6516d1, type: 3}
+  m_Name: Test 2
+  m_EditorClassIdentifier: 
+  nodes:
+  - uniqueID: 68f945a5-7957-4f50-84ec-f42c9a8e6118
+    text: AAAAA
+    children:
+    - 0064886e-b6c1-45f9-b2f6-0099e5fa6a16
+    rect:
+      serializedVersion: 2
+      x: 57
+      y: 42
+      width: 200
+      height: 100
+  - uniqueID: 0064886e-b6c1-45f9-b2f6-0099e5fa6a16
+    text: Hallo
+    children:
+    - 09c07d57-f797-4aed-a8bf-f846dc0ca29b
+    rect:
+      serializedVersion: 2
+      x: 308
+      y: 43
+      width: 200
+      height: 100
+  - uniqueID: 09c07d57-f797-4aed-a8bf-f846dc0ca29b
+    text: Test test
+    children:
+    - f33e3d5f-395d-4b83-be8b-66488b9b5b06
+    rect:
+      serializedVersion: 2
+      x: 597
+      y: 77
+      width: 200
+      height: 100
+  - uniqueID: f33e3d5f-395d-4b83-be8b-66488b9b5b06
+    text: 
+    children: []
+    rect:
+      serializedVersion: 2
+      x: 853
+      y: 84
+      width: 200
+      height: 100

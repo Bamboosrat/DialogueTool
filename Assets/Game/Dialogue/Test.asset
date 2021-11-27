@@ -16,23 +16,23 @@ MonoBehaviour:
   - uniqueID: 1bf0342c-8654-4e95-8730-2c38f43b2444
     text: Greetings traveller.
     children:
-    - 875a6897-559a-4e86-afc8-f116816006ab
     - fda19d0a-3994-4fde-9885-0c1c50f63b19
     - daee16b9-5c9a-4978-9411-edb4cba5f8be
-    - a70eccd0-4908-4a1f-97fe-b957ef061bf6
+    - 875a6897-559a-4e86-afc8-f116816006ab
     rect:
       serializedVersion: 2
-      x: 14
-      y: 123
+      x: 17
+      y: 46
       width: 200
       height: 100
   - uniqueID: 875a6897-559a-4e86-afc8-f116816006ab
     text: What's up?
-    children: []
+    children:
+    - c5146ec8-c00b-4a03-bdc3-31b64fdcf234
     rect:
       serializedVersion: 2
-      x: 332
-      y: 38
+      x: 359
+      y: 0
       width: 200
       height: 100
   - uniqueID: fda19d0a-3994-4fde-9885-0c1c50f63b19
@@ -40,8 +40,8 @@ MonoBehaviour:
     children: []
     rect:
       serializedVersion: 2
-      x: 346
-      y: 260
+      x: 176
+      y: 361
       width: 200
       height: 100
   - uniqueID: daee16b9-5c9a-4978-9411-edb4cba5f8be
@@ -49,16 +49,46 @@ MonoBehaviour:
     children: []
     rect:
       serializedVersion: 2
-      x: 346
-      y: 389
+      x: 418
+      y: 350
       width: 200
       height: 100
-  - uniqueID: a70eccd0-4908-4a1f-97fe-b957ef061bf6
-    text: I made big poopoo :)
+  - uniqueID: c5146ec8-c00b-4a03-bdc3-31b64fdcf234
+    text: 
     children: []
     rect:
       serializedVersion: 2
-      x: 339
-      y: 142
+      x: 948
+      y: 304
+      width: 200
+      height: 100
+  - uniqueID: c5146ec8-c00b-4a03-bdc3-31b64fdcf234
+    text: 
+    children: []
+    rect:
+      serializedVersion: 2
+      x: 910
+      y: 187
+      width: 200
+      height: 100
+  - uniqueID: c5146ec8-c00b-4a03-bdc3-31b64fdcf234
+    text: Good
+    children:
+    - c5146ec8-c00b-4a03-bdc3-31b64fdcf234
+    - ac53872a-dd73-4efe-91f9-0d2fa104d868
+    rect:
+      serializedVersion: 2
+      x: 652
+      y: 30
+      width: 200
+      height: 100
+  - uniqueID: ac53872a-dd73-4efe-91f9-0d2fa104d868
+    text: 
+    children:
+    - 1bf0342c-8654-4e95-8730-2c38f43b2444
+    rect:
+      serializedVersion: 2
+      x: 550
+      y: 212
       width: 200
       height: 100
