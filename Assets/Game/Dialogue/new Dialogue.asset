@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4681349716461275900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 020f97f07f03749489326945d4f88477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: f80498e4-97a3-4b3d-8c04-7942de65aa55
+  text: 
+  children:
+  - cbe31e02-ba27-4806-b0a4-81b8e8cdd88c
+  rect:
+    serializedVersion: 2
+    x: 170
+    y: 156
+    width: 200
+    height: 100
+--- !u!114 &-2408952636534185420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 020f97f07f03749489326945d4f88477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: cbe31e02-ba27-4806-b0a4-81b8e8cdd88c
+  text: 
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 664
+    y: 171
+    width: 200
+    height: 100
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85fa2bb5f35af8a49bfd20acaf6516d1, type: 3}
+  m_Name: new Dialogue
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -4681349716461275900}
+  - {fileID: -2408952636534185420}
