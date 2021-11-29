@@ -21,7 +21,7 @@ namespace DialogueTool
         [SerializeField]
         private List<string> children = new List<string>();
         [SerializeField]
-        private Rect rect = new Rect(0, 0, 200, 100);
+        private Rect rect = new Rect(0, 0, 200, 150);
 
         [SerializeField]
         string onEnterAction;
@@ -43,8 +43,6 @@ namespace DialogueTool
         {
             return text;
         }
-
-
 
         public List<string> GetChildren()
         {
@@ -72,7 +70,7 @@ namespace DialogueTool
       //  }
 
 
-#if UNITY_EDITOR
+        #if UNITY_EDITOR
         public void SetPosition(Vector2 newPosition)
         {
             Undo.RecordObject(this, "Move Dialogue Position");
@@ -98,10 +96,10 @@ namespace DialogueTool
             EditorUtility.SetDirty(this);
         }
 
-        public void RemoveChild(string childId)
+        public void RemoveChild(string childID)
         {
             Undo.RecordObject(this, "Remove Dialogue Link");
-            children.Remove(childId);
+            children.Remove(childID);
             EditorUtility.SetDirty(this);
         }
 
@@ -111,10 +109,7 @@ namespace DialogueTool
             isPlayerSpeaking = newIsPlayerSpeaking;
             EditorUtility.SetDirty(this);
         }
-
-
-
-#endif
+        #endif
 
         #endregion
     }

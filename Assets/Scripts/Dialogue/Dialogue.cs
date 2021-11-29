@@ -42,10 +42,10 @@ namespace DialogueTool
              return nodes[0];
         }
 
-        public IEnumerable<DialogueNode> GetAllChildren(DialogueNode parentNode)
+        public IEnumerable<DialogueNode> GetAllChildren(DialogueNode currentNode)
         {
             // List<DialogueNode> result = new List<DialogueNode>();
-            foreach (string childID in parentNode.GetChildren())
+            foreach (string childID in currentNode.GetChildren())
             {
                 if (nodeLookUp.ContainsKey(childID))
                 {

@@ -42,7 +42,6 @@ namespace DialogueTool.Editor
 
         Vector2 scrollPosition;
 
-
         #endregion
 
         // static keyword or methods belongs to no specific instances but all DialogueEditor scripts
@@ -89,6 +88,7 @@ namespace DialogueTool.Editor
             playerNodeStyle.padding = new RectOffset(20, 20, 20, 20);
             playerNodeStyle.border = new RectOffset(12, 12, 12, 12);
 
+            
         }
 
         private void OnSelectionChange()
@@ -143,9 +143,7 @@ namespace DialogueTool.Editor
                     selectedDialogue.DeleteNode(deletingNode);
                     deletingNode = null;
                 }
-            }
-
-            
+            }  
         }
 
         private void ProcessEvents()
@@ -188,12 +186,10 @@ namespace DialogueTool.Editor
             {
                 draggingCanvas = false;
             }
-
         }
 
         private DialogueNode GetNodeAtPoint(Vector2 point)
         {
-
             DialogueNode foundNode = null;
 
             foreach (DialogueNode node in selectedDialogue.GetAllNodes())
@@ -217,10 +213,10 @@ namespace DialogueTool.Editor
             {
                 style = playerNodeStyle;
             }
-            GUILayout.BeginArea(node.GetRect(), nodeStyle);
+            GUILayout.BeginArea(node.GetRect(), style);
             EditorGUI.BeginChangeCheck();
 
-            node.SetText(EditorGUILayout.TextField(node.GetText()));
+            node.SetText(EditorGUILayout.TextField(node.GetText(), GUILayout.Height(75)));
            
 
             GUILayout.BeginHorizontal();
@@ -238,8 +234,6 @@ namespace DialogueTool.Editor
                 creatingNode = node;
 
             }
-
-
 
             GUILayout.EndHorizontal();
 
@@ -262,7 +256,8 @@ namespace DialogueTool.Editor
                 {
                     linkingParentNode = null;
                 }
-            }else if (linkingParentNode.GetChildren().Contains(node.name))
+            }
+            else if (linkingParentNode.GetChildren().Contains(node.name))
             {
                 if (GUILayout.Button("Unlink"))
                 {
@@ -276,7 +271,6 @@ namespace DialogueTool.Editor
                 if (GUILayout.Button("Child"))
                 {
                     Undo.RecordObject(selectedDialogue, "Add Dialogue Link");
-
                     linkingParentNode.AddChild(node.name);
                     linkingParentNode = null;
                 }
@@ -300,7 +294,5 @@ namespace DialogueTool.Editor
 
             }
         }
-
-
     }
 }
