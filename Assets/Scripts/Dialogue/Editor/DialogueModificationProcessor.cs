@@ -6,6 +6,9 @@ using UnityEngine;
 
 namespace DialogueTool.Editor
 {
+
+    // Work around Unity's silly "feature" when naming a parent scriptable object it swaps places with its child object
+
     public class DialogueModificationProcessor : UnityEditor.AssetModificationProcessor
     {
         private static AssetMoveResult OnWillMoveAsset(string sourcePath, string destinationPath)

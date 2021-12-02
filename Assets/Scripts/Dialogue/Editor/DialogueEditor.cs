@@ -186,6 +186,11 @@ namespace DialogueTool.Editor
             {
                 draggingCanvas = false;
             }
+
+            if (Event.current.commandName == "UndoRedoPerformed")
+            {
+                GUI.changed = true;
+            }
         }
 
         private DialogueNode GetNodeAtPoint(Vector2 point)
@@ -221,20 +226,24 @@ namespace DialogueTool.Editor
 
             GUILayout.BeginHorizontal();
 
+            Color defaultGUIColor = GUI.backgroundColor;
+
+            GUI.backgroundColor = Color.red;
             if (GUILayout.Button("-"))
             {
                 deletingNode = node;
 
             }
-
+            GUI.backgroundColor = defaultGUIColor;
             DrawLinkButtons(node);
 
+            GUI.backgroundColor = Color.green;
             if (GUILayout.Button("+"))
             {
                 creatingNode = node;
 
             }
-
+            GUI.backgroundColor = defaultGUIColor;
             GUILayout.EndHorizontal();
 
             GUILayout.EndArea();

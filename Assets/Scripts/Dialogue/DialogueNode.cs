@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using OwnTool.Utils;
 
 
 namespace DialogueTool
@@ -27,8 +28,8 @@ namespace DialogueTool
         string onEnterAction;
         [SerializeField]
         string onExitAction;
-      //  [SerializeField]
-      //  Condition condition;
+        [SerializeField]
+        Condition condition;
 
 
         #endregion
@@ -64,10 +65,10 @@ namespace DialogueTool
             return onExitAction;
         }
 
-      //  public bool CheckCondition(IEnumerable<IPredicateEvaluator> evaluators)
-      //  {
-      //      return condition.Check(evaluators);
-      //  }
+        public bool CheckCondition(IEnumerable<IPredicateEvaluator> evaluators)
+        {
+            return condition.Check(evaluators);
+        }
 
 
         #if UNITY_EDITOR
