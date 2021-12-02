@@ -24,13 +24,6 @@ namespace DialogueTool
         [SerializeField]
         private Rect rect = new Rect(0, 0, 200, 150);
 
-        [SerializeField]
-        string onEnterAction;
-        [SerializeField]
-        string onExitAction;
-        [SerializeField]
-        Condition condition;
-
 
         #endregion
 
@@ -55,20 +48,6 @@ namespace DialogueTool
             return isPlayerSpeaking;
         }
 
-        public string GetOnEnterAction()
-        {
-            return onEnterAction;
-        }
-
-        public string GetOnExitAction()
-        {
-            return onExitAction;
-        }
-
-        public bool CheckCondition(IEnumerable<IPredicateEvaluator> evaluators)
-        {
-            return condition.Check(evaluators);
-        }
 
 
         #if UNITY_EDITOR
