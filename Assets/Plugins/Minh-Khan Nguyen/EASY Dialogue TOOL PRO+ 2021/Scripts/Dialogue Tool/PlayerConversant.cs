@@ -16,7 +16,7 @@ namespace DialogueTool
         private AIConversant currentConversant = null;
         private bool isChoosing = false;
 
-        private PlayerState playerState;
+        public PlayerState playerState;
 
         public event Action onConversationUpdated;
         #endregion
@@ -41,6 +41,11 @@ namespace DialogueTool
             }
 
             return currentNode.GetText();
+        }
+
+        public PlayerState GetPlayerState()
+        {
+            return playerState;
         }
 
         public string GetCurrentConversantName()
@@ -71,21 +76,21 @@ namespace DialogueTool
         #region Conversant Methods
         public void StartDialogue(AIConversant newConversant, Dialogue newDialogue)
         {
+            playerState = PlayerState.Dialogue;
             currentConversant = newConversant;
             currentDialogue = newDialogue;
             currentNode = currentDialogue.GetRootNode();
-            playerState = PlayerState.Dialogue;
             TriggerEnterAction();
             onConversationUpdated();
         }
 
         public void Quit()
         {
+            playerState = PlayerState.None;
             currentDialogue = null;
             TriggerExitAction();
             currentNode = null;
             isChoosing = false;
-            playerState = PlayerState.None;
             currentConversant = null;
             onConversationUpdated();
         }

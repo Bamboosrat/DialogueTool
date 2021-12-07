@@ -7,7 +7,7 @@ namespace Test.Control
 {
     public class DialogueController : MonoBehaviour
     {
-
+        // Struct are collection of related variables
         [System.Serializable]
         struct CursorMapping
         {

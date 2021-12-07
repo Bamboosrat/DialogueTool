@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9148037202774255371
+--- !u!114 &-7697555369369327054
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 020f97f07f03749489326945d4f88477, type: 3}
-  m_Name: 759cd93d-2615-4056-b285-8ec8f78a1902
+  m_Name: 7501fdc5-3505-4cbe-a646-fc3e6187014e
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  isConversationEnding: 1
-  text: Oh if so, move one.
+  text: Is this a Dialogue Tool?
   rect:
     serializedVersion: 2
-    x: 690
-    y: 46
+    x: 12
+    y: 70
     width: 200
     height: 150
   onEnterAction: 
@@ -26,8 +25,9 @@ MonoBehaviour:
   condition:
     and: []
   children:
-  - d6387bb3-300a-4701-a905-9b90fc91c328
---- !u!114 &-1249371306027159382
+  - 20329e4c-689f-49b2-84d6-6c3bd0b53731
+  - c6993f3e-3c59-4f55-96de-006a8b8aa978
+--- !u!114 &-6141363668876227759
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37,15 +37,40 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 020f97f07f03749489326945d4f88477, type: 3}
-  m_Name: d6387bb3-300a-4701-a905-9b90fc91c328
+  m_Name: 20329e4c-689f-49b2-84d6-6c3bd0b53731
   m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  isConversationEnding: 0
-  text: 
+  isPlayerSpeaking: 1
+  text: Yes
   rect:
     serializedVersion: 2
-    x: 942
-    y: 49
+    x: 246
+    y: 4
+    width: 200
+    height: 150
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+  children:
+  - 78d40b29-2406-4360-abdf-5942082a7576
+--- !u!114 &-5570861551792431330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 020f97f07f03749489326945d4f88477, type: 3}
+  m_Name: 8bb8a363-934b-4ac7-a1fa-b469db327e96
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Very Tool, much Dialogue
+  rect:
+    serializedVersion: 2
+    x: 771
+    y: 9
     width: 200
     height: 150
   onEnterAction: 
@@ -53,7 +78,7 @@ MonoBehaviour:
   condition:
     and: []
   children: []
---- !u!114 &-1030689636889752760
+--- !u!114 &-3610138489730425887
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -63,52 +88,71 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 020f97f07f03749489326945d4f88477, type: 3}
-  m_Name: a87e5be7-9b7d-4a5d-ac28-d32614e2ec98
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  isConversationEnding: 0
-  text: Stop right there, criminal scum.
-  rect:
-    serializedVersion: 2
-    x: 15
-    y: 113
-    width: 200
-    height: 150
-  onEnterAction: 
-  onExitAction: 
-  condition:
-    and: []
-  children:
-  - f16bd2ea-017b-451c-928d-b3cb44efb06a
-  - f6f56377-71fa-4b7c-9fe3-847b61c2ddd4
-  - de911f59-7a83-4b5e-9350-bb4821590392
---- !u!114 &-793684123659203551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 020f97f07f03749489326945d4f88477, type: 3}
-  m_Name: de911f59-7a83-4b5e-9350-bb4821590392
+  m_Name: 2088e645-1a20-458d-89e4-21da36e7ee9b
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  isConversationEnding: 0
-  text: <Ignore>
+  text: AH
   rect:
     serializedVersion: 2
-    x: 366
-    y: 317
+    x: 757
+    y: 9
     width: 200
     height: 150
   onEnterAction: 
   onExitAction: 
   condition:
     and: []
-  children:
-  - b83ca446-4f72-4afc-83df-5227bb9296f8
+  children: []
+--- !u!114 &-3302019670827413648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 020f97f07f03749489326945d4f88477, type: 3}
+  m_Name: 1981be96-c3bb-4b41-b1ab-cba86be38e84
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: BH
+  rect:
+    serializedVersion: 2
+    x: 757
+    y: 204
+    width: 200
+    height: 150
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+  children: []
+--- !u!114 &-2057436108184602273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 020f97f07f03749489326945d4f88477, type: 3}
+  m_Name: 10c4528b-243e-4f11-85e8-a5d02fe617af
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Oh okay...
+  rect:
+    serializedVersion: 2
+    x: 504
+    y: 163
+    width: 200
+    height: 150
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+  children: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,18 +163,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85fa2bb5f35af8a49bfd20acaf6516d1, type: 3}
-  m_Name: NPC Dialogue
+  m_Name: Dialogue Test
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: -1030689636889752760}
-  - {fileID: 8395816913309590468}
-  - {fileID: -9148037202774255371}
-  - {fileID: 8131189330923576027}
-  - {fileID: -793684123659203551}
-  - {fileID: 4443047468336833777}
-  - {fileID: -1249371306027159382}
+  - {fileID: -7697555369369327054}
+  - {fileID: -6141363668876227759}
+  - {fileID: 8997944884693876111}
+  - {fileID: -5570861551792431330}
+  - {fileID: 5393386389737568535}
+  - {fileID: -2057436108184602273}
   newNodeOffset: {x: 250, y: 0}
---- !u!114 &4443047468336833777
+--- !u!114 &3514817769270653577
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,23 +183,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 020f97f07f03749489326945d4f88477, type: 3}
-  m_Name: b83ca446-4f72-4afc-83df-5227bb9296f8
+  m_Name: a91817c3-b137-43a5-b998-d9302885d290
   m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  isConversationEnding: 1
-  text: Violence it is.
+  isPlayerSpeaking: 1
+  text: CH
   rect:
     serializedVersion: 2
-    x: 683
-    y: 221
+    x: 758
+    y: 350
     width: 200
-    height: 200
+    height: 150
   onEnterAction: 
   onExitAction: 
   condition:
     and: []
   children: []
---- !u!114 &8131189330923576027
+--- !u!114 &5393386389737568535
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,15 +208,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 020f97f07f03749489326945d4f88477, type: 3}
-  m_Name: f6f56377-71fa-4b7c-9fe3-847b61c2ddd4
+  m_Name: c6993f3e-3c59-4f55-96de-006a8b8aa978
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  isConversationEnding: 0
-  text: Pay with your blood!
+  text: No
   rect:
     serializedVersion: 2
-    x: 365
-    y: 156
+    x: 247
+    y: 159
     width: 200
     height: 150
   onEnterAction: 
@@ -182,8 +223,8 @@ MonoBehaviour:
   condition:
     and: []
   children:
-  - b83ca446-4f72-4afc-83df-5227bb9296f8
---- !u!114 &8395816913309590468
+  - 10c4528b-243e-4f11-85e8-a5d02fe617af
+--- !u!114 &8997944884693876111
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -193,15 +234,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 020f97f07f03749489326945d4f88477, type: 3}
-  m_Name: f16bd2ea-017b-451c-928d-b3cb44efb06a
+  m_Name: 78d40b29-2406-4360-abdf-5942082a7576
   m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  isConversationEnding: 0
-  text: You might have confused me with someone else.
+  isPlayerSpeaking: 0
+  text: Wow
   rect:
     serializedVersion: 2
-    x: 369
-    y: 8
+    x: 505
+    y: 4
     width: 200
     height: 150
   onEnterAction: 
@@ -209,4 +249,4 @@ MonoBehaviour:
   condition:
     and: []
   children:
-  - 759cd93d-2615-4056-b285-8ec8f78a1902
+  - 8bb8a363-934b-4ac7-a1fa-b469db327e96
