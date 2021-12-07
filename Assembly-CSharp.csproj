@@ -60,14 +60,14 @@
     <Compile Include="Assets\Scripts\Dialogue\AiConversant.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueUI.cs" />
     <Compile Include="Assets\Scripts\Dialogue\Dialogue.cs" />
+    <Compile Include="Assets\Scripts\IPredicateEvaluator.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueNode.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Dialogue\PlayerConversant.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />
     <Compile Include="Assets\Scripts\IRaycastable.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\CursorType.cs" />
-    <Compile Include="Assets\Scripts\IPredicateEvaluator.cs" />
     <Compile Include="Assets\Scripts\Conditions.cs" />
+    <Compile Include="Assets\Scripts\CursorType.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

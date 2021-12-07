@@ -1,0 +1,212 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9148037202774255371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 020f97f07f03749489326945d4f88477, type: 3}
+  m_Name: 759cd93d-2615-4056-b285-8ec8f78a1902
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  isConversationEnding: 1
+  text: Oh if so, move one.
+  rect:
+    serializedVersion: 2
+    x: 690
+    y: 46
+    width: 200
+    height: 150
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+  children:
+  - d6387bb3-300a-4701-a905-9b90fc91c328
+--- !u!114 &-1249371306027159382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 020f97f07f03749489326945d4f88477, type: 3}
+  m_Name: d6387bb3-300a-4701-a905-9b90fc91c328
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  isConversationEnding: 0
+  text: 
+  rect:
+    serializedVersion: 2
+    x: 942
+    y: 49
+    width: 200
+    height: 150
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+  children: []
+--- !u!114 &-1030689636889752760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 020f97f07f03749489326945d4f88477, type: 3}
+  m_Name: a87e5be7-9b7d-4a5d-ac28-d32614e2ec98
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  isConversationEnding: 0
+  text: Stop right there, criminal scum.
+  rect:
+    serializedVersion: 2
+    x: 15
+    y: 113
+    width: 200
+    height: 150
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+  children:
+  - f16bd2ea-017b-451c-928d-b3cb44efb06a
+  - f6f56377-71fa-4b7c-9fe3-847b61c2ddd4
+  - de911f59-7a83-4b5e-9350-bb4821590392
+--- !u!114 &-793684123659203551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 020f97f07f03749489326945d4f88477, type: 3}
+  m_Name: de911f59-7a83-4b5e-9350-bb4821590392
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  isConversationEnding: 0
+  text: <Ignore>
+  rect:
+    serializedVersion: 2
+    x: 366
+    y: 317
+    width: 200
+    height: 150
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+  children:
+  - b83ca446-4f72-4afc-83df-5227bb9296f8
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85fa2bb5f35af8a49bfd20acaf6516d1, type: 3}
+  m_Name: NPC Dialogue
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -1030689636889752760}
+  - {fileID: 8395816913309590468}
+  - {fileID: -9148037202774255371}
+  - {fileID: 8131189330923576027}
+  - {fileID: -793684123659203551}
+  - {fileID: 4443047468336833777}
+  - {fileID: -1249371306027159382}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &4443047468336833777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 020f97f07f03749489326945d4f88477, type: 3}
+  m_Name: b83ca446-4f72-4afc-83df-5227bb9296f8
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  isConversationEnding: 1
+  text: Violence it is.
+  rect:
+    serializedVersion: 2
+    x: 683
+    y: 221
+    width: 200
+    height: 200
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+  children: []
+--- !u!114 &8131189330923576027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 020f97f07f03749489326945d4f88477, type: 3}
+  m_Name: f6f56377-71fa-4b7c-9fe3-847b61c2ddd4
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  isConversationEnding: 0
+  text: Pay with your blood!
+  rect:
+    serializedVersion: 2
+    x: 365
+    y: 156
+    width: 200
+    height: 150
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+  children:
+  - b83ca446-4f72-4afc-83df-5227bb9296f8
+--- !u!114 &8395816913309590468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 020f97f07f03749489326945d4f88477, type: 3}
+  m_Name: f16bd2ea-017b-451c-928d-b3cb44efb06a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  isConversationEnding: 0
+  text: You might have confused me with someone else.
+  rect:
+    serializedVersion: 2
+    x: 369
+    y: 8
+    width: 200
+    height: 150
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+  children:
+  - 759cd93d-2615-4056-b285-8ec8f78a1902
