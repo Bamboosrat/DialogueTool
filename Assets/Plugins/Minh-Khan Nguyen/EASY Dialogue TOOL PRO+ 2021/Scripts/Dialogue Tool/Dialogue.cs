@@ -5,11 +5,16 @@ using UnityEditor;
 
 namespace DialogueTool
 {
+    /// <summary>
+    /// A Dialogue Scriptable Object.
+    /// 
+    /// In here you can find methods to create nodes and manipulate them.
+    /// </summary>
+
     [CreateAssetMenu(fileName = "new Dialogue", menuName = "Dialogue", order = 0)]
     public class Dialogue : ScriptableObject, ISerializationCallbackReceiver
     {
         #region Fields / Variables
-
         [Tooltip("A list of all the childnodes.")]
         [SerializeField]
         private List<DialogueNode> nodes = new List<DialogueNode>();
@@ -33,22 +38,40 @@ namespace DialogueTool
             }
         }
 
-        // Flexible data container
+        /// <summary>
+        /// The GetAllNodes method takes no parameters and returns all nodes saved in a list.
+        /// </summary>
+        /// <returns> All DialogueNode items from a list. </returns>
         public IEnumerable<DialogueNode> GetAllNodes()
         {
             return nodes;
         }
 
+        /// <summary>
+        /// The GetRoodNode method takes no parameters and returns the first node saved in a list.
+        /// </summary>
+        /// <returns> The first DialogueNode item from a list. </returns>
         public DialogueNode GetRootNode()
         {
              return nodes[0];
         }
 
+        /// <summary>
+        /// The GetLastNode method takes no parameters and returns the last node saved in a list.
+        /// </summary>
+        /// <returns> The last DialogueNode item from a list. </returns>
         public DialogueNode GetLastNode()
         {
             return nodes[nodes.Count - 1];
         }
 
+        /// <summary>
+        /// The GetAllChildren method takes one parameter to compare all children ID with the current node.
+        /// 
+        /// It compares all children with the current node by looking it up and comparing the ID and DialogueNode type.
+        /// </summary>
+        /// <param name="currentNode"> The currently selected node to be compared with the child nodes. </param>
+        /// <returns> All child nodes get returned, belonging to this node (excluding the selected node). </returns>
         public IEnumerable<DialogueNode> GetAllChildren(DialogueNode currentNode)
         {
             foreach (string childID in currentNode.GetChildren())
@@ -90,7 +113,11 @@ namespace DialogueTool
 #if UNITY_EDITOR
 
 
-
+        /// <summary>
+        /// The CreateNode method creates a new node and attaches / childs the new node to a parent node.
+        /// </summary>
+        /// <param name="parent"> The parent node the child node gets attached to. If a node is selected beforehand. </param>
+        /// <seealso cref="CreateNode(Vector2)"/>
         public void CreateNode(DialogueNode parent)
         {
             DialogueNode newNode = MakeNode(parent);
@@ -99,6 +126,11 @@ namespace DialogueTool
             AddNode(newNode);
         }
 
+        /// <summary>
+        /// The CreateNode method creates a new node and sets it position to the offset.
+        /// </summary>
+        /// <param name="offset"> The offset is a Vector2 and defines the position the newly created node is placed. </param>
+        /// <seealso cref="CreateNode(Vector2)"/>
         public void CreateNode(Vector2 offset)
         {
             DialogueNode newNode = MakeNode(offset);
@@ -106,9 +138,16 @@ namespace DialogueTool
             Undo.RecordObject(this, "Added seperate Dialogue Node");
             AddNode(newNode);
         }
+        private void AddNode(DialogueNode newNode)
+        {
+            nodes.Add(newNode);
+            OnValidate();
+        }
 
-
-
+        /// <summary>
+        /// The DeleteNode deletes a selected node.
+        /// </summary>
+        /// <param name="nodeToDelete"> The currently selected node. </param>
         public void DeleteNode(DialogueNode nodeToDelete)
         {
             Undo.RecordObject(this, "Removed Dialogue Node");
@@ -116,12 +155,6 @@ namespace DialogueTool
             OnValidate();
             CleanDanglingChildren(nodeToDelete);
             Undo.DestroyObjectImmediate(nodeToDelete);
-        }
-
-        private void AddNode(DialogueNode newNode)
-        {
-            nodes.Add(newNode);
-            OnValidate();
         }
 
         // Overloading 1, implemented for right click => CreateNode Method
@@ -197,4 +230,5 @@ namespace DialogueTool
 
         #endregion
     }
+
 }
