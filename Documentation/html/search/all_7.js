@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['control_0',['Control',['../namespace_test_1_1_control.html',1,'Test']]],
-  ['test_1',['Test',['../namespace_test.html',1,'']]],
-  ['ui_2',['UI',['../namespace_test_1_1_u_i.html',1,'Test']]]
+  ['selectchoice_0',['SelectChoice',['../class_dialogue_tool_1_1_player_conversant.html#a6299d8a8b308c60421bd8746384dbb32',1,'DialogueTool::PlayerConversant']]],
+  ['startdialogue_1',['StartDialogue',['../class_dialogue_tool_1_1_player_conversant.html#a524a9748401aad99ba8f06aff73c76b5',1,'DialogueTool::PlayerConversant']]]
 ];

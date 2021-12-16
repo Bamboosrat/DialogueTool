@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using System.IO;
 using UnityEditor;
 
@@ -26,3 +27,4 @@ namespace DialogueTool.Editor
         }
     }
 }
+#endif

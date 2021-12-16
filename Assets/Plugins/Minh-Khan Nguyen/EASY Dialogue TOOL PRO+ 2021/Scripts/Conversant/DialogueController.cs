@@ -5,6 +5,9 @@ using UnityEngine.AI;
 
 namespace Test.Control
 {
+    /// <summary>
+    /// Add this to the player.
+    /// </summary>
     public class DialogueController : MonoBehaviour
     {
         // Struct are collection of related variables

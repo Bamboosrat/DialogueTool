@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['evaluate_0',['Evaluate',['../interface_own_tool_1_1_utils_1_1_i_predicate_evaluator.html#ad9969543ba65fe4021c3e5a752afe49e',1,'OwnTool::Utils::IPredicateEvaluator']]]
+  ['quit_0',['Quit',['../class_dialogue_tool_1_1_player_conversant.html#abc3463050472462cfc868ba7c2a74552',1,'DialogueTool::PlayerConversant']]]
 ];

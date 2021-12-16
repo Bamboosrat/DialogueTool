@@ -6,6 +6,11 @@ using OwnTool.Utils;
 
 namespace DialogueTool
 {
+    /// <summary>
+    /// All properties and methods for the Player.
+    /// 
+    /// Add this component to your player and give him a name.
+    /// </summary>
     public class PlayerConversant : MonoBehaviour
     {
         #region Fields / Variables
@@ -23,16 +28,28 @@ namespace DialogueTool
 
         #region Properties
 
+        /// <summary>
+        /// A bool property to check if Player is in a dialogue.
+        /// </summary>
+        
         public bool IsActive()
         {
             return currentDialogue != null;
         }
+
+        /// <summary>
+        /// A bool property to check if the player can choose an option.
+        /// </summary>
 
         public bool IsChoosing()
         {
             return isChoosing;
         }
 
+        /// <summary>
+        /// A string property to return the text of the current dialogue.
+        /// </summary>
+        /// <returns> string message </returns>
         public string GetText()
         {
             if (currentNode == null)
@@ -43,10 +60,19 @@ namespace DialogueTool
             return currentNode.GetText();
         }
 
+        /// <summary>
+        /// Returns the current state of the player.
+        /// </summary>
+        /// <see cref="PlayerState"/>
         public PlayerState GetPlayerState()
         {
             return playerState;
         }
+
+
+        /// <summary>
+        /// Returns the current speaker name.
+        /// </summary>
 
         public string GetCurrentConversantName()
         {
@@ -74,6 +100,11 @@ namespace DialogueTool
         #endregion
 
         #region Conversant Methods
+        /// <summary>
+        /// Starts a dialogue.
+        /// </summary>
+        /// <param name="newConversant"></param>
+        /// <param name="newDialogue"></param>
         public void StartDialogue(AIConversant newConversant, Dialogue newDialogue)
         {
             playerState = PlayerState.Dialogue;
@@ -84,6 +115,9 @@ namespace DialogueTool
             onConversationUpdated();
         }
 
+        /// <summary>
+        /// Ends a dialogue.
+        /// </summary>
         public void Quit()
         {
             playerState = PlayerState.None;
@@ -95,7 +129,10 @@ namespace DialogueTool
             onConversationUpdated();
         }
 
-
+        /// <summary>
+        /// Executes the choice, the player made in the dialogue.
+        /// </summary>
+        /// <param name="chosenNode"></param>
         public void SelectChoice(DialogueNode chosenNode)
      {
          currentNode = chosenNode;
@@ -104,6 +141,7 @@ namespace DialogueTool
          Next();
      }
 
+        // Continues the dialogue, depending on the choices and order of the dialogue.
        public void Next()
        {
            int numPlayerResponses = FilterOnCondition(currentDialogue.GetPlayerChildren(currentNode)).Count();

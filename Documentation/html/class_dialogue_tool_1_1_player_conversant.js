@@ -1,26 +1,11 @@
 var class_dialogue_tool_1_1_player_conversant =
 [
-    [ "FilterOnCondition", "class_dialogue_tool_1_1_player_conversant.html#ae18124b401fa444ed783d5d43ed046c1", null ],
-    [ "GetChoices", "class_dialogue_tool_1_1_player_conversant.html#a89438f71027a1527be5938a44e6ad44d", null ],
     [ "GetCurrentConversantName", "class_dialogue_tool_1_1_player_conversant.html#ad064e4104e70117e04b948d7b8a0bfbb", null ],
-    [ "GetEvaluators", "class_dialogue_tool_1_1_player_conversant.html#a77de3d224daad6eb4eb63cd6011e3646", null ],
     [ "GetPlayerState", "class_dialogue_tool_1_1_player_conversant.html#ac756b451f3ddebffa734d6b509f4bd29", null ],
     [ "GetText", "class_dialogue_tool_1_1_player_conversant.html#a8c8a0ba30f4cff9b0fd84b942de2320e", null ],
-    [ "HasNext", "class_dialogue_tool_1_1_player_conversant.html#a8bae3797d63517078417134275815533", null ],
     [ "IsActive", "class_dialogue_tool_1_1_player_conversant.html#a4df7f524259a2760b6292cc24e18b7cb", null ],
     [ "IsChoosing", "class_dialogue_tool_1_1_player_conversant.html#a6f3dc4b23aca7e846fde6c635b261e01", null ],
-    [ "Next", "class_dialogue_tool_1_1_player_conversant.html#a42d68f2d64f157e407847be1b8503b24", null ],
     [ "Quit", "class_dialogue_tool_1_1_player_conversant.html#abc3463050472462cfc868ba7c2a74552", null ],
     [ "SelectChoice", "class_dialogue_tool_1_1_player_conversant.html#a6299d8a8b308c60421bd8746384dbb32", null ],
-    [ "StartDialogue", "class_dialogue_tool_1_1_player_conversant.html#a524a9748401aad99ba8f06aff73c76b5", null ],
-    [ "TriggerAction", "class_dialogue_tool_1_1_player_conversant.html#a25a64ed133d1f54bbb7f74cecc98e342", null ],
-    [ "TriggerEnterAction", "class_dialogue_tool_1_1_player_conversant.html#aa496c8e8645da4cbee5bf5c8a031f7d7", null ],
-    [ "TriggerExitAction", "class_dialogue_tool_1_1_player_conversant.html#adbcb83c68a69a94db46e767f43c3a6a6", null ],
-    [ "currentConversant", "class_dialogue_tool_1_1_player_conversant.html#a41de4900893c56b10ec337e461a80e66", null ],
-    [ "currentDialogue", "class_dialogue_tool_1_1_player_conversant.html#a1ee59a6e2d746f16a053ea80e3dc1f6a", null ],
-    [ "currentNode", "class_dialogue_tool_1_1_player_conversant.html#aa24932fb8b5f135d6018503ffdb676cd", null ],
-    [ "isChoosing", "class_dialogue_tool_1_1_player_conversant.html#ab352b71e08b997697cfc55ac9eee92ac", null ],
-    [ "playerName", "class_dialogue_tool_1_1_player_conversant.html#a1cf1deff13ef4445491fe439f80a0d8d", null ],
-    [ "playerState", "class_dialogue_tool_1_1_player_conversant.html#a804e40b71cb66f54f3a4ff1fcdb2b375", null ],
-    [ "onConversationUpdated", "class_dialogue_tool_1_1_player_conversant.html#abc14c1c9fb88f208c84bf8f66a12cbd1", null ]
+    [ "StartDialogue", "class_dialogue_tool_1_1_player_conversant.html#a524a9748401aad99ba8f06aff73c76b5", null ]
 ];

@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['getallchildren_0',['GetAllChildren',['../class_dialogue_tool_1_1_dialogue.html#a4fc201e155d5c313b85b42aeb4556e5f',1,'DialogueTool::Dialogue']]],
-  ['getallnodes_1',['GetAllNodes',['../class_dialogue_tool_1_1_dialogue.html#a79e6d6f9519ddc4d6be7085b67d6c725',1,'DialogueTool::Dialogue']]],
-  ['getlastnode_2',['GetLastNode',['../class_dialogue_tool_1_1_dialogue.html#a6a47cd7f5577ddfd08009cc07d2cd1b0',1,'DialogueTool::Dialogue']]],
-  ['getrootnode_3',['GetRootNode',['../class_dialogue_tool_1_1_dialogue.html#a162c0abc3da554892e7d585e2a4dd2ca',1,'DialogueTool::Dialogue']]]
+  ['isactive_0',['IsActive',['../class_dialogue_tool_1_1_player_conversant.html#a4df7f524259a2760b6292cc24e18b7cb',1,'DialogueTool::PlayerConversant']]],
+  ['ischoosing_1',['IsChoosing',['../class_dialogue_tool_1_1_player_conversant.html#a6f3dc4b23aca7e846fde6c635b261e01',1,'DialogueTool::PlayerConversant']]],
+  ['isplayerspeaking_2',['IsPlayerSpeaking',['../class_dialogue_tool_1_1_dialogue_node.html#a65ca740fc66ab747aca4ec410d7eed4d',1,'DialogueTool::DialogueNode']]]
 ];

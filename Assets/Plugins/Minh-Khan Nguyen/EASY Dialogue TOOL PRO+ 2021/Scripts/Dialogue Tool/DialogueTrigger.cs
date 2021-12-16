@@ -10,6 +10,7 @@ namespace DialogueTool
         [SerializeField] private UnityEvent onTrigger;
         #endregion
 
+        // In developement.
         #region Trigger Method
         public void Trigger(string actionToTrigger)
         {

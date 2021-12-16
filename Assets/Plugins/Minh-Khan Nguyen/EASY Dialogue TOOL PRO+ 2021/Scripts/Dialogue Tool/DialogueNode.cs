@@ -6,7 +6,9 @@ using OwnTool.Utils;
 
 namespace DialogueTool
 {
-   
+   /// <summary>
+   /// Properties and methods of a node.
+   /// </summary>
     public class DialogueNode : ScriptableObject
     {
 
@@ -41,27 +43,42 @@ namespace DialogueTool
 
         #region Properties
 
-        // Get rekt, nerd. GG EZ lmao
+        /// <summary>
+        /// 
+        /// </summary>
         public Rect GetRect()
         {
             return rect;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public int GetTextBoxSize()
         {
             return (int)rect.height - 60;
         }
 
+
+        /// <summary>
+        /// 
+        /// </summary>
         public string GetText()
         {
             return text;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public List<string> GetChildren()
         {
             return children;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public bool IsPlayerSpeaking()
         {
             return isPlayerSpeaking;

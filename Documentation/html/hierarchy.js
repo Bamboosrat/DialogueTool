@@ -1,8 +1,5 @@
 var hierarchy =
 [
-    [ "UnityEditor.AssetModificationProcessor", null, [
-      [ "DialogueTool.Editor.DialogueModificationProcessor", "class_dialogue_tool_1_1_editor_1_1_dialogue_modification_processor.html", null ]
-    ] ],
     [ "OwnTool.Utils.Condition", "class_own_tool_1_1_utils_1_1_condition.html", null ],
     [ "Test.Control.DialogueController.CursorMapping", "struct_test_1_1_control_1_1_dialogue_controller_1_1_cursor_mapping.html", null ],
     [ "OwnTool.Utils.Condition.Disjunction", "class_own_tool_1_1_utils_1_1_condition_1_1_disjunction.html", null ],

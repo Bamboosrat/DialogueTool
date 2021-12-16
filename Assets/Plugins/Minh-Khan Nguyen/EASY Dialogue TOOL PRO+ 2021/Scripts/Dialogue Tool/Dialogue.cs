@@ -6,7 +6,7 @@ using UnityEditor;
 namespace DialogueTool
 {
     /// <summary>
-    /// A Dialogue Scriptable Object.
+    /// A dialogue Scriptable Object.
     /// 
     /// In here you can find methods to create nodes and manipulate them.
     /// </summary>
@@ -39,39 +39,33 @@ namespace DialogueTool
         }
 
         /// <summary>
-        /// The GetAllNodes method takes no parameters and returns all nodes saved in a list.
+        /// Returns all nodes.
         /// </summary>
-        /// <returns> All DialogueNode items from a list. </returns>
         public IEnumerable<DialogueNode> GetAllNodes()
         {
             return nodes;
         }
 
         /// <summary>
-        /// The GetRoodNode method takes no parameters and returns the first node saved in a list.
+        /// Returns the first node.
         /// </summary>
-        /// <returns> The first DialogueNode item from a list. </returns>
         public DialogueNode GetRootNode()
         {
              return nodes[0];
         }
 
         /// <summary>
-        /// The GetLastNode method takes no parameters and returns the last node saved in a list.
+        /// Returns the last node.
         /// </summary>
-        /// <returns> The last DialogueNode item from a list. </returns>
         public DialogueNode GetLastNode()
         {
             return nodes[nodes.Count - 1];
         }
 
         /// <summary>
-        /// The GetAllChildren method takes one parameter to compare all children ID with the current node.
-        /// 
-        /// It compares all children with the current node by looking it up and comparing the ID and DialogueNode type.
+        /// Returns all children.
         /// </summary>
-        /// <param name="currentNode"> The currently selected node to be compared with the child nodes. </param>
-        /// <returns> All child nodes get returned, belonging to this node (excluding the selected node). </returns>
+        /// <param name="currentNode"></param>
         public IEnumerable<DialogueNode> GetAllChildren(DialogueNode currentNode)
         {
             foreach (string childID in currentNode.GetChildren())
@@ -83,6 +77,7 @@ namespace DialogueTool
             }
         }
 
+        // In developement
         public IEnumerable<DialogueNode> GetPlayerChildren(DialogueNode currentNode)
         {
             foreach (DialogueNode node in GetAllChildren(currentNode))
@@ -94,7 +89,7 @@ namespace DialogueTool
             }
         }
 
-
+        // In developement
         public IEnumerable<DialogueNode> GetAIChildren(DialogueNode currentNode)
         {
             foreach (DialogueNode node in GetAllChildren(currentNode))
