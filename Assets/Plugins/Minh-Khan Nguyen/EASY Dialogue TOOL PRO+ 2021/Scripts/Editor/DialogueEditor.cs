@@ -248,7 +248,7 @@ namespace DialogueTool.Editor
                 }
             }
             
-            
+            // Right-click menu
             if (Event.current.type == EventType.ContextClick && Event.current.button == 1)
             {
                 GenericMenu menu = new GenericMenu();

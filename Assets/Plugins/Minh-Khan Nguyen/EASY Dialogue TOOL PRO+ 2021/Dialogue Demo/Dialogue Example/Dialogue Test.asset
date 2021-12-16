@@ -16,11 +16,11 @@ MonoBehaviour:
   text: Is this a Dialogue Tool?
   rect:
     serializedVersion: 2
-    x: 12
-    y: 70
+    x: 18
+    y: 66
     width: 200
     height: 150
-  onEnterAction: 
+  onEnterAction: Dialogue Started
   onExitAction: 
   condition:
     and: []
@@ -43,7 +43,7 @@ MonoBehaviour:
   text: Yes
   rect:
     serializedVersion: 2
-    x: 246
+    x: 242
     y: 4
     width: 200
     height: 150
@@ -74,7 +74,7 @@ MonoBehaviour:
     width: 200
     height: 150
   onEnterAction: 
-  onExitAction: 
+  onExitAction: Dialogue ended
   condition:
     and: []
   children: []
@@ -144,12 +144,12 @@ MonoBehaviour:
   text: Oh okay...
   rect:
     serializedVersion: 2
-    x: 504
-    y: 163
+    x: 525
+    y: 176
     width: 200
     height: 150
   onEnterAction: 
-  onExitAction: 
+  onExitAction: Dialogue ended
   condition:
     and: []
   children: []
@@ -214,8 +214,8 @@ MonoBehaviour:
   text: No
   rect:
     serializedVersion: 2
-    x: 247
-    y: 159
+    x: 243
+    y: 171
     width: 200
     height: 150
   onEnterAction: 
@@ -240,8 +240,8 @@ MonoBehaviour:
   text: Wow
   rect:
     serializedVersion: 2
-    x: 505
-    y: 4
+    x: 504
+    y: 3
     width: 200
     height: 150
   onEnterAction: 

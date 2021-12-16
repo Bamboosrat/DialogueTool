@@ -211,6 +211,8 @@ namespace DialogueTool
         {
             if (action == "") return;
 
+            Debug.Log(action);
+
             foreach (DialogueTrigger trigger in currentConversant.GetComponents<DialogueTrigger>())
             {
                 trigger.Trigger(action);

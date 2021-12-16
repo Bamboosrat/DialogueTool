@@ -56,18 +56,7 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\Dialogue\AiConversant.cs" />
-    <Compile Include="Assets\Scripts\Dialogue\DialogueUI.cs" />
-    <Compile Include="Assets\Scripts\Dialogue\Dialogue.cs" />
-    <Compile Include="Assets\Scripts\IPredicateEvaluator.cs" />
-    <Compile Include="Assets\Scripts\Dialogue\DialogueNode.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\Dialogue\PlayerConversant.cs" />
-    <Compile Include="Assets\Scripts\Weapon.cs" />
-    <Compile Include="Assets\Scripts\IRaycastable.cs" />
-    <Compile Include="Assets\Scripts\Conditions.cs" />
-    <Compile Include="Assets\Scripts\CursorType.cs" />
+    <Compile Include="Assets\Interactable.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -660,6 +649,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{A48E502C-0717-4C5A-F14E-060AEBA2E69D}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VSCode.Editor.csproj">
       <Project>{DA7EE013-A7AB-AB59-B5A6-EB7366B79D8D}</Project>
       <Name>Unity.VSCode.Editor</Name>

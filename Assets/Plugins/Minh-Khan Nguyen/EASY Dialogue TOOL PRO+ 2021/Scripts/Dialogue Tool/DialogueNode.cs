@@ -17,8 +17,6 @@ namespace DialogueTool
         [Tooltip("Is the player speaking?")]
         [SerializeField]
         private bool isPlayerSpeaking = false;
-       // [SerializeField]
-       // private bool isConversationEnding = false;
 
         [SerializeField]
         [TextArea(5,20)]
@@ -83,11 +81,6 @@ namespace DialogueTool
         {
             return isPlayerSpeaking;
         }
-
-       // public bool IsConversationEnding()
-       // {
-       //     return isConversationEnding;
-       // }
 
         public string GetOnEnterAction()
         {

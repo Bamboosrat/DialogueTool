@@ -16,8 +16,8 @@ MonoBehaviour:
   text: Oh if so, move one.
   rect:
     serializedVersion: 2
-    x: 690
-    y: 46
+    x: 632
+    y: 43
     width: 200
     height: 150
   onEnterAction: 
@@ -42,12 +42,12 @@ MonoBehaviour:
   text: Scum.
   rect:
     serializedVersion: 2
-    x: 942
-    y: 49
+    x: 928
+    y: 53
     width: 200
     height: 150
-  onEnterAction: 
-  onExitAction: 
+  onEnterAction: Ignore
+  onExitAction: Leaving conversation
   condition:
     and: []
   children: []
@@ -67,11 +67,11 @@ MonoBehaviour:
   text: Stop right there, criminal scum.
   rect:
     serializedVersion: 2
-    x: 15
-    y: 113
+    x: 23
+    y: 110
     width: 200
     height: 150
-  onEnterAction: 
+  onEnterAction: Entering Conversation
   onExitAction: 
   condition:
     and: []
@@ -142,12 +142,12 @@ MonoBehaviour:
   text: Violence it is.
   rect:
     serializedVersion: 2
-    x: 683
-    y: 221
+    x: 663
+    y: 236
     width: 200
     height: 200
-  onEnterAction: 
-  onExitAction: 
+  onEnterAction: Attack.
+  onExitAction: Leaving conversation.
   condition:
     and: []
   children: []
@@ -193,8 +193,8 @@ MonoBehaviour:
   text: You might have confused me with someone else.
   rect:
     serializedVersion: 2
-    x: 369
-    y: 8
+    x: 356
+    y: 7
     width: 200
     height: 150
   onEnterAction: 
