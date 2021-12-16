@@ -13,9 +13,18 @@ namespace DialogueTool
         
         [SerializeField] Dialogue dialogue = null;
         [SerializeField] string conversantName;
+
+        private Interactable interactable;
+
+        private void Start()
+        {
+            interactable = gameObject.GetComponentInChildren<Interactable>();
+        }
+
         
         // Not finished
         // Later implementation to change mouse icon when hovering over items, NPC, etc.
+
         public CursorType GetCursorType()
         {
             return CursorType.Dialogue;
@@ -29,9 +38,10 @@ namespace DialogueTool
                 return false;
             }
 
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && interactable.GetClickable())  
             {
                 callingController.GetComponent<PlayerConversant>().StartDialogue(this, dialogue);
+                transform.LookAt(callingController.transform, Vector3.up);
             }
             return true;
         }
@@ -44,6 +54,6 @@ namespace DialogueTool
         {
             return conversantName;
         }
-        
     }
 }
+
